@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finch Collector</title>
+</head>
+
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+
+    <h1>Cat List</h1>
+
+    {% for finch in finch %}
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ finch.species }}</span>
+            <p>Break length: {{ finch.beak_length }}</p>
+            <p>Beak_width: {{ finch.beak_width }}</p>
+            <!-- {% if cat.age > 0 %} -->
+            <p>color: {{ finch.color }}</p>
+            <!-- {% else %}
+            <p>Age: Kitten</p>
+            {% endif %} -->
+        </div>
+    </div>
+    {% endfor %}
+
+    {% endblock %}
+</body>
+
+</html>
